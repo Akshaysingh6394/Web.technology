@@ -1,0 +1,9 @@
+h2{
+    height: 150px;
+    width: 1050px;
+    font-size: 25px;
+    padding: 200px;
+    border: 20px double rgba(61, 40, 81, 0.406);
+    margin: 30px;
+    background-color: rgb(211, 219, 221);
+}
