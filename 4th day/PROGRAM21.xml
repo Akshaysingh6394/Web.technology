@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <book>
+    <category>Fiction</category>
+    <title>The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <year>1925</year>
+    <price>12.99</price>
+  </book>
+  <book>
+    <category>Science Fiction</category>
+    <title>Dune</title>
+    <author>Frank Herbert</author>
+    <year>1965</year>
+    <price>14.99</price>
+  </book>
+  <!-- Add more books here -->
+</library>
+
+

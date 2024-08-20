@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CD Catalog</title>
+</head>
+<body>
+  <h1>CD Catalog</h1>
+  <table border="1">
+    <!-- Use JavaScript to load the XML and XSLT files and apply the transformation -->
+    <script>
+      // Load the XML document
+      var xml = new XMLHttpRequest();
+      xml.open("GET", "cd_catalog.xml", false);
+      xml.send();
+      var xmlDoc = xml.responseXML;
+
+      // Load the XSLT document
+      var xslt = new XMLHttpRequest();
+      xslt.open("GET", "cd_catalog.xsl", false);
+      xslt.send();
+      var xsltDoc = xslt.responseXML;
+
+      // Transform the XML with the XSLT
+      var xsltProcessor = new XSLTProcessor();
+      xsltProcessor.importStylesheet(xsltDoc);
+      var resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+
+      // Append the transformed content to the body
+      document.body.appendChild(resultDocument);
+    </script>
+  </table>
+</body>
+</html>

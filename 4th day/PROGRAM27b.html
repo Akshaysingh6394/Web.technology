@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CD Catalog</title>
+</head>
+<body>
+  <h1>CD Catalog</h1>
+  <table border="1">
+    <tr>
+      <th>Artist</th>
+      <th>Title</th>
+    </tr>
+    <!-- Use JavaScript to parse the XML and display the CD catalog -->
+    <script>
+      // Parse the XML document
+      var parser = new DOMParser();
+      var xmlDoc = parser.parseFromString(`<?xml version="1.0" encoding="UTF-8"?>
+        <CD_catalog>
+          <CD>
+            <ARTIST>Michael Jackson</ARTIST>
+            <TITLE>Thriller</TITLE>
+          </CD>
+          <CD>
+            <ARTIST>The Beatles</ARTIST>
+            <TITLE>Abbey Road</TITLE>
+          </CD>
+          <CD>
+            <ARTIST>Queen</ARTIST>
+            <TITLE>A Night at the Opera</TITLE>
+          </CD>
+        </CD_catalog>
+      `, "text/xml");
+
+      // Extract CD elements
+      var cdElements = xmlDoc.getElementsByTagName("CD");
+
+      // Iterate through CD elements and display Artist and Title
+      for (var i = 0; i < cdElements.length; i++) {
+        var artist = cdElements[i].getElementsByTagName("ARTIST")[0].textContent;
+        var title = cdElements[i].getElementsByTagName("TITLE")[0].textContent;
+
+        // Create a new row in the table
+        var row = document.createElement("tr");
+
+        // Create cells for Artist and Title
+        var artistCell = document.createElement("td");
+        var titleCell = document.createElement("td");
+
+        // Set the content of the cells
+        artistCell.textContent = artist;
+        titleCell.textContent = title;
+
+        // Append cells to the row
+        row.appendChild(artistCell);
+        row.appendChild(titleCell);
+
+        // Append the row to the table
+        document.querySelector("table").appendChild(row);
+      }
+    </script>
+  </table>
+</body>
+</html>

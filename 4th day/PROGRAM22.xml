@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml_key_components>
+  <!-- Element: Describes a basic XML element -->
+  <element>
+    <name>book</name>
+    <description>A representation of a book</description>
+    <example>
+      <book>
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <author>J.K. Rowling</author>
+        <year>1997</year>
+      </book>
+    </example>
+  </element>
+
+  <!-- Attribute: Provides additional information about an element -->
+  <attribute>
+    <name>isbn</name>
+    <description>International Standard Book Number</description>
+    <example>
+      <book isbn="978-0590353403">
+        <title>The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <year>1937</year>
+      </book>
+    </example>
+  </attribute>
+
+  <!-- Text: Represents the text content within an element -->
+  <text>
+    <name>title</name>
+    <description>The title of a book</description>
+    <example>
+      <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+      </book>
+    </example>
+  </text>
+
+  <!-- Comment: Used for adding comments within the XML -->
+  <comment>
+    <description>Here's a comment about the XML key components</description>
+  </comment>
+
+  <!-- CDATA: Represents character data that should not be parsed as XML -->
+  <cdata>
+    <description>This is a CDATA section with special characters: < > &</description>
+    <example>
+      <note><![CDATA[This is some <b>bold</b> and &lt;em&gt;emphasized&lt;/em&gt; text.]]></note>
+    </example>
+  </cdata>
+</xml_key_components>

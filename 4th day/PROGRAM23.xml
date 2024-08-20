@@ -1,0 +1,20 @@
+<!DOCTYPE library [
+  <!-- Define the book element -->
+  <!ELEMENT book (title, author, year, genre?, price?)>
+
+  <!-- Define the title, author, year, genre, and price elements -->
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT author (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT genre (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+
+  <!-- Define the isbn attribute for the book element -->
+  <!ATTLIST book isbn CDATA #REQUIRED>
+
+  <!-- Define the language attribute for the book element -->
+  <!ATTLIST book language (English | Spanish | French | German) "English">
+
+  <!-- Define the publisher attribute for the book element -->
+  <!ATTLIST book publisher CDATA #IMPLIED>
+]>
