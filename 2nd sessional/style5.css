@@ -1,0 +1,90 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: white;
+  }
+  
+  h2 {
+    color: #007bff;
+    text-align: left;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+  }
+  
+  tbody td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

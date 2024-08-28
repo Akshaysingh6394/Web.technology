@@ -1,0 +1,60 @@
+<!-- QUESTION 3: Write a program to validate a registration page using regular expressions in JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    form {
+      margin: 50px auto;
+      width: 300px;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br>
+    
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone"><br>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+    <p id="message"></p>
+  </form>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      const nameRegex = /^[A-Za-z ]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^\d{10}$/;
+
+      if (!nameRegex.test(name)) {
+        document.getElementById('message').innerHTML = "Invalid name!";
+      } else if (!emailRegex.test(email)) {
+        document.getElementById('message').innerHTML = "Invalid email!";
+      } else if (!phoneRegex.test(phone)) {
+        document.getElementById('message').innerHTML = "Invalid phone number!";
+      } else {
+        document.getElementById('message').innerHTML = "Registration Successful!";
+      }
+    }
+  </script>
+
+</body>
+</html>
